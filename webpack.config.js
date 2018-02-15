@@ -2,6 +2,7 @@
 	IMPORTS
 \**************************************************************************/
 const path = require("path");
+const webpack = require("webpack");
 const ManifestPlugin = require("webpack-manifest-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 
@@ -18,6 +19,7 @@ const config = {};
 		config.resolve.extensions = [];
 	config.entry = {};
 	config.output = {};
+    config.plugins = [];
 	config.module = {};
 		config.module.rules = [];
 	
@@ -31,7 +33,7 @@ config.target = "web";
 
 
 /**************************************************************************\
-	TARGET
+	ALIASES
 \**************************************************************************/
 config.resolve.alias["@js"] = path.resolve(thisPath, "dev/js/");
 config.resolve.alias["@components"] = path.resolve(thisPath, "dev/vue/");
@@ -53,7 +55,7 @@ config.resolve.extensions.push(".css");
 /**************************************************************************\
 	ENTRIES
 \**************************************************************************/
-//
+config.entry["test"] = "@js/test.js";
 
 
 
@@ -61,7 +63,7 @@ config.resolve.extensions.push(".css");
 	OUTPUTS
 \**************************************************************************/
 config.output["path"] = path.resolve(thisPath, "public_html/assets/js");
-config.output["filename"] = "[name].[chunkhash:8].bundle.js";
+config.output["filename"] = "[name].bundle.js"; //.[chunkhash:8]
 config.output["publicPath"] = "/assets/js"
 
 
@@ -154,6 +156,7 @@ config.plugins.push(new CleanWebpackPlugin(["assets/js"], {
 	dry: false,
 	exclude: ["globals", "globals/*", "globals/*.*"]
 }));
+config.plugins.push(new webpack.optimize.UglifyJsPlugin({minimize: true}));
 
 
 

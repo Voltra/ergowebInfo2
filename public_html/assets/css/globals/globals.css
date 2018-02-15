@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+    font-family: roboto;
+}
+
+body{
+    display: block;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    
+    overflow: hidden;
+    overflow-y: auto;
+}
