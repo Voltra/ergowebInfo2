@@ -1,4 +1,11 @@
+$breakpoint: 768px;
 $width: 100vw;
 $height: 100vh;
 $fullWidth: $width;
 $fullHeight: $height;
+
+$topBarHeightMobile: 10vh;
+$topBarHeight: 6vw;
+
+$contentHeightMobile: calc(#{$fullHeight} - #{$topBarHeightMobile});
+$contentHeight: calc(#{$fullHeight} - #{$topBarHeight});

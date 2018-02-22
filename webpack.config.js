@@ -55,7 +55,8 @@ config.resolve.extensions.push(".css");
 /**************************************************************************\
 	ENTRIES
 \**************************************************************************/
-config.entry["test"] = "@js/test.js";
+//config.entry["test"] = "@js/test.js";
+config.entry["index"] = "@js/index.js";
 
 
 

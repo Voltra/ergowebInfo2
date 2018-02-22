@@ -1,0 +1,16 @@
+<script>
+	export default {
+		name: "app-content",
+		render(){
+			return (
+				<div class="container">
+                    {this.$slots.default}
+                </div>
+			);
+		}
+	};
+</script>
+
+<style lang="scss" scoped>
+    @import "~@css/wireframe/_components/content/content";
+</style>
