@@ -2,7 +2,7 @@ import Vue from "$es-vue"
 import TopBar from "@components/TopBar"
 import AppContent from "@components/AppContent"
 
-import "@css/wireframe/index/index"
+import "@css/index/index"
 
 const components = { TopBar, AppContent };
 

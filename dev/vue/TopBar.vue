@@ -12,5 +12,5 @@
 </script>
 
 <style lang="scss" scoped>
-    @import "~@css/wireframe/_components/topbar/topbar";
+    @import "~@css/_components/topbar/topbar";
 </style>

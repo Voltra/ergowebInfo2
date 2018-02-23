@@ -12,5 +12,5 @@
 </script>
 
 <style lang="scss" scoped>
-    @import "~@css/wireframe/_components/content/content";
+    @import "~@css/_components/content/content";
 </style>

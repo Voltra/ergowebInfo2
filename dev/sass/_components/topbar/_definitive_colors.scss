@@ -1,0 +1,5 @@
+.container {
+	background-color: $primary;
+    color: $white;
+    @include box-shadow(0 -4px 2px 4px rgba(#000, 0.35));
+}
