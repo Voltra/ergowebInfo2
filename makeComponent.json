@@ -1,0 +1,9 @@
+{
+    "stylesLocation": "./dev/sass/_components/",
+    "stylesTemplate": "./dev/sass/_structure",
+    "fileToRename": {
+        "name": "RENAME_ME",
+        "extension": "scss"
+    },
+    "componentsPath": "./dev/vue/"
+}

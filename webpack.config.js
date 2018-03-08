@@ -157,7 +157,7 @@ config.plugins.push(new CleanWebpackPlugin(["assets/js"], {
 	dry: false,
 	exclude: ["globals", "globals/*", "globals/*.*"]
 }));
-config.plugins.push(new webpack.optimize.UglifyJsPlugin({minimize: true}));
+//config.plugins.push(new webpack.optimize.UglifyJsPlugin({minimize: true}));
 
 
 

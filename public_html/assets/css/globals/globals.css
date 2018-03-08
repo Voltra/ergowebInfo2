@@ -12,6 +12,8 @@ body{
     
     overflow: hidden;
     overflow-y: auto;
+    
+    background-color: #e9ebee;
 }
 
 #app{

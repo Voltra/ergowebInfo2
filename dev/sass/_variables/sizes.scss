@@ -1,11 +1,36 @@
+/*************************************\
+    Global
+\*************************************/
 $breakpoint: 768px;
+$defaultSpacing: 1.5vh;
+$mobileDefaultSpacing: 2vw;
+
 $width: 100vw;
 $height: 100vh;
 $fullWidth: $width;
 $fullHeight: $height;
 
+
+/*************************************\
+    Top bar
+\*************************************/
 $topBarHeightMobile: 10vh;
 $topBarHeight: 6vw;
 
+$logoMaxWidth: 2 * $topBarHeight;//$fullWidth / 6;
+$logoMaxHeight: $topBarHeight;
+$logoMaxHeightMobile: $topBarHeightMobile;
+
+$logoImgMaxHeight: calc(#{$logoMaxHeight} - 2 * #{$defaultSpacing});
+$logoImgMaxHeightMobile: calc(#{$logoMaxHeightMobile} - 2 * #{$mobileDefaultSpacing});
+
+$menuWidth: calc(#{$fullWidth} - #{$logoMaxWidth});
+$menuHeight: $topBarHeight;
+$menuHeightMobile: $topBarHeightMobile;
+
+
+/*************************************\
+    Page content
+\*************************************/
 $contentHeightMobile: calc(#{$fullHeight} - #{$topBarHeightMobile});
 $contentHeight: calc(#{$fullHeight} - #{$topBarHeight});

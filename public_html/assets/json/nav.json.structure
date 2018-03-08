@@ -1,0 +1,6 @@
+nav -> []
+    [i] -> {}
+        .name -> string
+        .url -> string|none ==> Pas d'url si c'est un sous-menu ou si non actif
+        .active -> bool
+        .children -> array|none ==> Pas d'enfants si ce n'est pas un sous-menu ou si non actif

@@ -1,0 +1,126 @@
+[
+    {
+        "name": "Accueil",
+        "url": "index.html",
+        "active": true
+    },
+    {
+        "name": "Itinéraire",
+        "active": true,
+        "children": [
+            {
+                "name": "Chateaux de la Loire",
+                "url": "",
+                "active": true
+            },
+            {
+                "name": "Loire nature",
+                "url": "",
+                "active": true
+            },{
+                "name": "Gastronomie et vins de Loire",
+                "url": "",
+                "active": true
+            },{
+                "name": "Jardins de Loire",
+                "url": "",
+                "active": true
+            },{
+                "name": "Villes et villages de caractère",
+                "url": "",
+                "active": true
+            },{
+                "name": "Insolites et curiosités",
+                "url": "",
+                "active": true
+            }
+        ]
+    },
+    {
+        "name": "S'organiser",
+        "active": true,
+        "children": [
+            {
+                "name": "Votre séjour clé en main",
+                "url": "",
+                "active": true
+            },{
+                "name": "Que faire ?",
+                "url": "",
+                "active": true
+            },{
+                "name": "Que visiter ?",
+                "url": "",
+                "active": true
+            },{
+                "name": "Où louer votre vélo ?",
+                "url": "",
+                "active": true
+            },{
+                "name": "Où dormir ?",
+                "url": "",
+                "active": true
+            },{
+                "name": "Où manger ?",
+                "url": "",
+                "active": true
+            },{
+                "name": "Où se renseigner ?",
+                "url": "",
+                "active": true
+            },{
+                "name": "Louer les services d'un guide",
+                "url": "",
+                "active": true
+            },{
+                "name": "Agences de voyage vélo",
+                "url": "",
+                "active": true
+            }
+        ]
+    },
+    {
+        "name": "Infos pratiques",
+        "active": true,
+        "children": [
+            {
+                "name": "Accès à l'itinéraire",
+                "url": "",
+                "active": true
+            },
+            {
+                "name": "FAQ",
+                "url": "",
+                "active": true
+            },{
+                "name": "Brochures",
+                "url": "",
+                "active": true
+            },{
+                "name": "Météo",
+                "url": "",
+                "active": true
+            },{
+                "name": "Nos partenaires",
+                "url": "",
+                "active": true
+            },{
+                "name": "Concept et chiffres",
+                "url": "",
+                "active": true
+            },{
+                "name": "Val de Loire UNESCO",
+                "url": "",
+                "active": true
+            },{
+                "name": "Eurovélo 6",
+                "url": "",
+                "active": true
+            },{
+                "name": "Véloroutes et voies vertes",
+                "url": "",
+                "active": true
+            }
+        ]
+    }
+]
