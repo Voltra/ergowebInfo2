@@ -1,0 +1,23 @@
+li{
+    &.elem{
+        //    display: block;
+        position: relative;
+        @include noBullets();
+
+        cursor: pointer;
+
+        & > a, & > span{
+            @include absoluteCenterXY();
+        }
+    }
+    
+    &.sub-elem{
+        & > a, & > span{
+            @include absoluteCenterY();
+        }
+    }
+    
+    &.current{
+        cursor: not-allowed;
+    }
+}

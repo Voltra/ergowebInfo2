@@ -1,0 +1,21 @@
+.login-form {
+    & > form{
+        & > [name="identifier"], & > [name="password"], & > [type="submit"]{
+            background-color: $white;
+            color: $textColor;
+            
+            border: none;
+            @include box-shadow($regularShadow);
+        }
+        
+        & > [type="submit"]{
+            background-color: $secondary;
+            color: $white;
+            transition: background-color 0.3s ease-in-out;
+            
+            &:hover{
+                background-color: $accent;
+            }
+        }
+    }
+}

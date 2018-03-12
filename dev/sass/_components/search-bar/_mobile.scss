@@ -1,0 +1,23 @@
+form.search-bar{
+    width: $searchBarWidthMobile;
+    height: $searchBarHeightMobile;
+    
+//    padding: $mobileDefaultSpacing;
+    padding: $searchBarPaddingMobileV $searchBarPaddingMobileH;
+    
+    & > .form-content{
+        width: $searchBarContentWidthMobile;
+        height: $searchBarContentHeightMobile;
+        @include border-radius($searchBarBorderRadiusMobile);
+        
+        
+        
+        & > input[name="search"], & > [type="submit"]{
+            font-size: $searchBarFontSizeMobile;
+        }
+        
+        & > input[name="search"]{
+            padding: $searchBarInputPaddingMobile;
+        }
+    }
+}

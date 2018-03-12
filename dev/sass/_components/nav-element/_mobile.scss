@@ -1,0 +1,7 @@
+li{
+    &.sub-elem{
+        & > a, & > span{
+            left: $mobileDefaultSpacing;
+        }
+    }
+}

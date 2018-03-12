@@ -1,0 +1,19 @@
+.elem{
+    transition: background-color 0.2s ease-in-out;
+    
+    &:hover{
+        background-color: $secondary;
+    }
+    
+    &.current{
+        &, &:hover{
+            background-color: $accent;
+            @include box-shadow($regularShadow);
+        }
+    }
+    
+    & > .sub-nav{
+        background-color: $primary;
+        display: none;
+    }
+}

@@ -1,0 +1,8 @@
+ul.nav-menu{
+    position: relative;
+    display: block;
+    float: left;
+    color: $white;
+    
+    @include noBullets();
+}

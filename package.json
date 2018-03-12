@@ -6,6 +6,7 @@
   "dependencies": {
     "@voltra/json": "^1.1.1",
     "fetch_json": "^1.1.0",
+    "jq-cssvar": "^1.0.1",
     "jquery": "^3.3.1",
     "spinner-lord": "^0.2.6",
     "vue": "^2.5.13"

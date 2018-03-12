@@ -1,0 +1,28 @@
+li.elem{
+    display: inline-block;
+    width: $navElemWidth;
+    height: $navElemHeight;
+    
+    font-size: $navFontSize;
+    
+    & > ul.sub-nav{
+        & > li.elem{
+            width: $subNavElemWidth;
+            height: $subNavElemHeight;
+            
+            & > span{
+                @include absoluteCenterY();
+                left: $defaultSpacing;
+            }
+        }
+    }
+}
+
+//li.elem:hover{
+//    & > ul.sub-nav{
+//        height: auto;
+//        & > li.elem{
+//            height: $navElemHeight;
+//        }
+//    }
+//}

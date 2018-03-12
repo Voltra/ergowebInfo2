@@ -1,0 +1,38 @@
+/*li*/.elem {
+//    display: block;
+    @include noBullets();
+    position: relative;
+    
+    cursor: pointer;
+    
+    & > span{
+        @include absoluteCenterXY();
+    }
+    
+    & > /*ul*/.sub-nav{
+        display: block;
+        @include noBullets();
+        
+        position: absolute;
+        top: 100%;
+        
+//        &, & > .elem{
+//            transition-property: height, opacity;
+//            transition-duration: 0.3s;
+//            transition-timing-function: ease-in-out;
+//            
+////            display: none;
+//            opacity: 0;
+//            height: 0;
+//        }
+    }
+}
+
+//li.elem:hover{
+//    & > ul.sub-nav{
+//        &, & > li.elem{
+////            display: block;
+//            opacity: 1;
+//        }
+//    }
+//}

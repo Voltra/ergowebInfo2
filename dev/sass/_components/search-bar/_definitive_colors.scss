@@ -1,0 +1,12 @@
+form.search-bar{
+    & > .form-content{
+        background-color: $white;
+        @include box-shadow($regularShadow);
+        
+        & > input[name="search"], & > [type="submit"]{
+            border: none;
+            background-color: transparent;
+            color: $textColor;
+        }
+    }
+}

@@ -37,6 +37,7 @@ config.target = "web";
 \**************************************************************************/
 config.resolve.alias["@js"] = path.resolve(thisPath, "dev/js/");
 config.resolve.alias["@components"] = path.resolve(thisPath, "dev/vue/");
+config.resolve.alias["@vplugins"] = path.resolve(thisPath, "dev/vue-plugins/");
 config.resolve.alias["@css"] = path.resolve(thisPath, "dev/sass/");
 config.resolve.alias["@img"] = path.resolve(thisPath, "dev/rsc/img");
 

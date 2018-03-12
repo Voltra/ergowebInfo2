@@ -1,0 +1,47 @@
+.login-form{
+    position: relative;
+    float: left;
+    
+    & > form{
+        display: block;
+        position: relative;
+        
+        & > [name="identifier"], & > [name="password"], & > [type="submit"]{
+            display: block;
+            float: left;
+        }
+        
+        & > input{
+            margin-right: $loginFieldSpacing;
+            padding: calc(#{$loginOuterPadding} / 4);
+        }
+        
+        
+        & > [name="identifier"]{
+            margin-left: calc(2 * #{$loginOuterSpacing});
+            width: $loginIdentifierWidth;
+            height: $loginIdentifierHeight;
+        }
+        
+        & > [name="password"]{
+            width: $loginPasswordWidth;
+            height: $loginPasswordHeight;
+        }
+        
+        & > [type="submit"]{
+            cursor: pointer;
+            position: relative;
+//            width: $loginButtonWidth;
+            height: $loginButtonHeight;
+            @include border-radius(100vh);
+            
+            & > i.material-icons{
+                @include absoluteCenterXY();
+            }
+            
+            margin-right: calc(2 * #{$loginOuterSpacing});
+            padding-left: $loginOuterPadding;
+            padding-right: $loginOuterPadding;
+        }
+    }
+}

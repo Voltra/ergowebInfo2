@@ -11,6 +11,7 @@ $fullWidth: $width;
 $fullHeight: $height;
 
 
+
 /*************************************\
     Top bar
 \*************************************/
@@ -27,6 +28,115 @@ $logoImgMaxHeightMobile: calc(#{$logoMaxHeightMobile} - 2 * #{$mobileDefaultSpac
 $menuWidth: calc(#{$fullWidth} - #{$logoMaxWidth});
 $menuHeight: $topBarHeight;
 $menuHeightMobile: $topBarHeightMobile;
+
+
+
+/*************************************\
+    Nav
+\*************************************/
+:root{ --nav-mount: 4; }
+$navAmount: var(--nav-mount, 4);
+$navProp: 2 / 5;
+
+$navWidth: calc(2 / 5 * #{$menuWidth});//figure this out later
+$navWidthMobile: 10vw;//figure this out later
+$navHeight: $menuHeight;
+$navHeightMobile: calc( #{$navAmount} * #{$menuHeightMobile});
+
+$navElemWidth: calc(#{$navWidth} / #{$navAmount});
+$navElemWidthMobile: 10vw;//figure this out later
+    $subNavElemWidth: calc(2 * #{$navWidth} / #{$navAmount});
+    $subNavElemWidthMobile: 10vw;//figure this out later
+$navElemHeight: $navHeight;
+$navElemHeightMobile: 10vh;//figure this out later
+    $subNavElemHeight: calc(2 / 3 * #{$navHeight});
+    $subNavElemHeightMobile: 10vh;//figure this out later
+
+$navFontSize: 1.1vw;
+$navFontSizeMobile: 1.1vh;
+
+
+
+$otherProp: calc(1 - #{$navProp});
+/*************************************\
+    Search Bar
+\*************************************/
+$searchBarProp: calc(#{$otherProp} / 3);
+
+$searchBarBorderRadius: 1.75vh;
+$searchBarBorderRadiusMobile: 1.75vw;
+
+$searchBarPaddingH: $defaultSpacing;
+$searchBarPaddingMobileH: $mobileDefaultSpacing;
+$searchBarPaddingV: 2 * $defaultSpacing;
+$searchBarPaddingMobileV: 2 * $mobileDefaultSpacing;
+
+$searchBarWidth: calc(3 / 5 / 3 * #{$menuWidth});
+$searchBarWidthMobile: 10vw;//figure this out later
+$searchBarHeight: $menuHeight;
+$searchBarHeightMobile: 10vh;//figure this out later
+
+$searchBarFontSize: $navFontSize;
+$searchBarFontSizeMobile: $navFontSizeMobile;
+
+    $searchBarContentWidth: calc(#{$searchBarWidth} - 2 * #{$searchBarPaddingH});
+    $searchBarContentWidthMobile: calc(#{$searchBarWidthMobile} - 2 * #{$searchBarPaddingMobileH});
+    $searchBarContentHeight: calc(#{$searchBarHeight} - 2 * #{$searchBarPaddingV});
+    $searchBarContentHeightMobile: calc(#{$searchBarHeightMobile} - 2 * #{$searchBarPaddingMobileV});
+
+        $searchBarInputWidth: 80%;
+        $searchBarInputHeight: 100%;
+        $searchBarInputPadding: calc(#{$defaultSpacing} / 2);
+        $searchBarInputPaddingMobile: calc(#{$mobileDefaultSpacing} / 2);
+        $searchBarButtonWidth: 100% - $searchBarInputWidth;
+        $searchBarButtonHeight: 100%;
+
+
+
+/*************************************\
+    Search Bar
+\*************************************/
+$loginProp: calc(1 - #{$searchBarProp});
+
+$loginBorderRadius: $searchBarBorderRadius;
+$loginBorderRadiusMobile: $searchBarBorderRadiusMobile;
+
+$loginPaddingH: $searchBarPaddingH;
+$loginPaddingMobileH: $searchBarPaddingMobileH;
+$loginPaddingV: $searchBarPaddingV;
+$loginPaddingMobileV: $searchBarPaddingMobileV;
+
+$loginWidth: calc(3 / 5 * 2 / 3 * #{$menuWidth});
+$loginWidthMobile: 10vw;//figure this out later
+$loginHeight: $searchBarHeight;
+$loginHeightMobile: $searchBarHeightMobile;
+
+$loginFontSize: $navFontSize;
+$loginFontSizeMobile: $navFontSizeMobile;
+
+    $loginFormWidth: calc(#{$loginWidth} - 2 * #{$loginPaddingH});
+    $loginFormWidthMobile: calc(#{$loginWidthMobile} - 2 * #{$loginPaddingMobileH});
+    $loginFormHeight: calc(#{$loginHeight} - 2 * #{$loginPaddingV});
+    $loginFormHeightMobile: calc(#{$loginHeightMobile} - 2 * #{$loginPaddingMobileV});
+
+        $loginWidthFactor: 4.8;//see drawing
+        $loginFieldFactor: 1.5;//see drawing
+        $loginInSpacingFactor: 0.4;//see drawing
+        $loginOutSpacingFactor: 0.1;//see drawing
+        $loginButtonFactor: 0.5;//see drawing
+
+        $loginFieldSpacing: $loginInSpacingFactor * 100% / $loginWidthFactor;
+        $loginOuterSpacing: $loginOutSpacingFactor * 100% / $loginWidthFactor;
+        $loginOuterPadding: 2 * $loginOuterSpacing;
+        $loginIdentifierWidth: $loginFieldFactor * 100% / $loginWidthFactor;
+        $loginIdentifierHeight: 100%;
+        $loginPasswordWidth: $loginIdentifierWidth;
+        $loginPasswordHeight: $loginIdentifierHeight;
+        $loginButtonWidth: calc(#{$loginButtonFactor} * #{$loginFormWidth} / #{$loginButtonFactor});
+        $loginButtonWidthMobile: calc(#{$loginButtonFactor} * #{$loginFormWidthMobile} / #{$loginButtonFactor});
+        $loginButtonHeight: $loginButtonFactor * 100% / $loginButtonFactor;
+
+
 
 
 /*************************************\

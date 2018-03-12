@@ -1,0 +1,15 @@
+li{
+    &.elem{
+        display: inline-block;
+        width: $navElemWidth;
+        height: $navElemHeight;
+
+        font-size: $navFontSize;
+    }
+    
+    &.sub-elem{
+        & > a, & > span{
+            left: $defaultSpacing;
+        }
+    }
+}

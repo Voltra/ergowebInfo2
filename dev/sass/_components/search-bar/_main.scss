@@ -1,0 +1,27 @@
+form.search-bar{
+    width: $searchBarWidth;
+    height: $searchBarHeight;
+    
+//    padding: $defaultSpacing;
+    padding: $searchBarPaddingV $searchBarPaddingH;
+    
+    & > .form-content{
+        width: $searchBarContentWidth;
+        height: $searchBarContentHeight;
+        @include border-radius($searchBarBorderRadius);
+        
+        & > input[name="search"], & > [type="submit"]{
+            font-size: $searchBarFontSize;
+        }
+        
+        & > input[name="search"]{
+            padding: $searchBarInputPadding;
+        }
+        
+        & > [type="submit"]{
+            & > i.material-icons{
+                font-size: calc(1.5 * #{$loginFontSize});
+            }
+        }
+    }
+}

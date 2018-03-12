@@ -1,0 +1,21 @@
+li{
+    & > a, & > span{
+        text-decoration: none;
+        color: $white;
+    }
+    
+    &.elem{
+        transition: background-color 0.2s ease-in-out;
+    
+        &:hover{
+            background-color: $secondary;
+        }
+    }
+    
+    &.current{
+        &, &:hover{
+            background-color: $accent;
+            @include box-shadow($regularShadow);
+        }
+    }
+}

@@ -1,0 +1,29 @@
+form.search-bar{
+    display: block;
+    float: left;
+    
+    & > .form-content{
+        & > input[name="search"], & > [type="submit"]{
+//            display: inline-block;
+            display: block;
+            float: left;
+        }
+        
+        & > input[name="search"]{
+            width: $searchBarInputWidth;
+            height: $searchBarInputHeight;
+        }
+        
+        & > [type="submit"]{
+            position: relative;
+            width: $searchBarButtonWidth;
+            height: $searchBarButtonHeight;
+            
+            cursor: pointer;
+            
+            & > i.material-icons{
+                @include absoluteCenterXY();
+            }
+        }
+    }
+}
