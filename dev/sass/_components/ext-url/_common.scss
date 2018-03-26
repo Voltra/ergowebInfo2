@@ -1,0 +1,7 @@
+a.link.ext{
+    font-size: 1em;
+    & i.material-icons{
+        font-size: inherit;
+        @include translateY(25%);
+    }
+}

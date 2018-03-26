@@ -1,4 +1,7 @@
 <script>
+    import Url from "@components/Url"
+    import ExtUrl from "@components/ExtUrl"
+    
 	export default {
 		name: "v-footer",
         props: {
@@ -7,11 +10,17 @@
                 required: true
             }
         },
+        data(){
+            return {
+                linkText: "Plus"
+            }
+        },
 		render(){
+            //<a href="">Plus</a>
 			return (
                 <footer>
                     <p>Mentions légales et copyright</p>
-                    <a href="">Plus</a>
+                    <ExtUrl text={this.linkText}/>
                     <div class="imgs">
                         {
                             this.$props["footerData"]

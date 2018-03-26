@@ -10,10 +10,13 @@ import AppContent from "@components/AppContent"
 import VFooter from "@components/VFooter"
 import VMenu from "@components/VMenu"
 import GMap from "@components/GMap"
+import Url from "@components/Url"
+import ExtUrl from "@components/ExtUrl"
 
 import JsonClientPlugin from "@vplugins/$json"
 import MakeIdPlugin from "@vplugins/makeID"
 import JqueryPlugin from "@vplugins/jquery"
+import ResponsiveDirective from "@vplugins/responsiveDirective"
 import * as VueGoogleMaps from "vue2-google-maps"
 
 import "@css/index/index"
@@ -24,8 +27,8 @@ const root = location.href.replace(/\/[^/]*$/, "");
 const asset = uri => root + "/assets/" + uri;
 
 $(document).ready(()=>{    
-    const components = { TopBar, AppContent, VMenu, VFooter, GMap };
-    const plugins = [JsonClientPlugin, MakeIdPlugin, JqueryPlugin];
+    const components = { TopBar, AppContent, VMenu, VFooter, GMap, Url, ExtUrl };
+    const plugins = [JsonClientPlugin, MakeIdPlugin, JqueryPlugin, ResponsiveDirective];
     const componentsArray = Object.values(components);
     [...plugins, ...componentsArray].forEach(::Vue.use);
     
@@ -45,7 +48,7 @@ $(document).ready(()=>{
             return j.coords;
         })
     ]).then(([nav, footerJson, coords]) => {
-        const img = _ => asset(`img/${_}`);
+        const img = uri => asset(`img/${uri}`);
         const footerData = footerJson.map(_ => Object.assign({}, _, {src: img(_.src)}));
         
         $.cssVar("nav-amount", nav.length);
@@ -62,5 +65,5 @@ $(document).ready(()=>{
                 setTimeout(removeSpinnerLord, 1000);
             }
         });
-    });
+    }).catch(console.error);
 });

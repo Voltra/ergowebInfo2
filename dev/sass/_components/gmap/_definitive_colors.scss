@@ -1,3 +1,4 @@
 .gmap{
     @include box-shadow($regularShadow);
+    background-color: $accent;
 }
