@@ -19,7 +19,7 @@
         },
 		render(){
 			return (
-                <ul class="nav-menu" data-amount={this.amount}>
+                <ul role="nav" class="nav-menu" data-amount={this.amount}>
                     { this.$props["nav"].filter(e => e.name && typeof e.name=="string").map(navElem => {
                         const hasUrl = !!navElem.url;
                         const hasChildren = !!navElem.children;

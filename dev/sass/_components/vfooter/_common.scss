@@ -1,0 +1,36 @@
+footer{
+    display: block;
+    width: $footerWidth;
+    padding: $footerSpacing;
+    
+    & > p, & > a{
+        display: block;
+        text-align: center;
+    }
+    
+    & > a{
+        padding-top: $footerSpacing;
+    }
+    
+    & > .imgs{
+        display: flex;
+        padding-top: $footerSpacing;
+        width: $footerImgsWidth;
+        
+        & > .imgs__item{
+//            flex: 1;
+            flex-grow: 1;
+            flex-direction: column;
+            flex-shrink: 1;
+            position: relative;
+            
+            & > img{
+                width: auto;
+                max-width: 100%;
+                height: auto;
+                max-height: 100%;
+                @include absoluteCenterXY();
+            }
+        }
+    }
+}

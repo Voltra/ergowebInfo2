@@ -15,5 +15,6 @@
     & > .sub-nav{
         background-color: $primary;
         display: none;
+        @include box-shadow($regularShadow);
     }
 }

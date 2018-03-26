@@ -1,5 +1,6 @@
 <script>
     import NavElement from "./NavElement"
+    import debounce from "lodash.debounce"
     
 	export default {
 		name: "sub-nav",
@@ -23,7 +24,8 @@
         data(){
             return {
                 $ul: null,
-                slideOptions: {duration: 300/*, queue: false*/},
+                slideOptions: {duration: 300, queue: true},
+                delayOptions: {leading: true, trailing: true},
                 classes: {
                     elem: true,
                     current: this.isCurrent()
@@ -37,10 +39,15 @@
 //            $ul(){ return this.$(this.$el).children("ul.subn-nav").eq(0); },
 //            slideOptions(){ return {duration: 300, queue: false}; },
             slideUp(){
+                this.$ul.css("zIndex", 1);
                 this.$ul.slideUp(this.slideOptions);
             },
             slideDown(){
+                this.$ul.css("zIndex", 8);
                 this.$ul.slideDown(this.slideOptions);
+            },
+            toggleSlide(){
+                this.$ul.slideToggle(this.slideOptions);
             },
             isCurrent(){
                 const { children } = this.$props["nav"];
@@ -49,11 +56,17 @@
             }
         },
         computed: {
-            amount(){ return this.$props["amount"]; }
+            amount(){ return this.$props["amount"]; },
+            mouseOver(){
+                return debounce(::this.slideDown, this.slideOptions.duration * 2, this.delayOptions);
+            },
+            mouseLeave(){
+                return debounce(::this.slideUp, this.slideOptions.duration * 2, this.delayOptions);
+            }
         },
 		render(){
 			return (
-                <li class={this.classes} on-mouseover={::this.slideDown} on-mouseleave={::this.slideUp}>
+                <li class={this.classes} onClick={::this.toggleSlide} onMouseover={::this.slideDown} onMouseleave={::this.slideUp}>
                     <span>{this.$props["nav"].name}</span>
                     <ul class="sub-nav">
                         {this.$props["nav"]

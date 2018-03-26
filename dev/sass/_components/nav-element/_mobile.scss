@@ -1,4 +1,12 @@
 li{
+    &.elem{
+        display: block;
+        width: $navElemWidthMobile;
+        height: $navElemHeightMobile;
+
+        font-size: $navFontSizeMobile;
+    }
+    
     &.sub-elem{
         & > a, & > span{
             left: $mobileDefaultSpacing;

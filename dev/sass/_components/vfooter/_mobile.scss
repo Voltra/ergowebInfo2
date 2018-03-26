@@ -1,0 +1,11 @@
+footer{
+    min-height: $footerHeightMobile;
+    
+    & > p, & > a{
+        font-size: $footerFontSizeMobile;
+    }
+    
+    & > .imgs{
+        height: $footerImgsHeightMobile;
+    }
+}

@@ -5,14 +5,14 @@
         position: relative;
         float: left;
 //        padding: $defaultSpacing;
-        width: $logoMaxWidth;
+//        width: $logoMaxWidth;
 
         & > img{
             @include absoluteCenterXY();
             display: block;
             height: auto;
             width: auto;
-            max-width: calc(#{$logoMaxWidth} - 2 * #{$defaultSpacing});
+            //max-width: calc(#{$logoMaxWidth} - 2 * #{$defaultSpacing});
         }
     }
 }

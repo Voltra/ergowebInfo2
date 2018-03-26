@@ -4,12 +4,17 @@
   "description": "refactoring loireavelo.fr",
   "main": "index.js",
   "dependencies": {
-    "@voltra/json": "^1.1.1",
+    "@voltra/json": "^1.1.2",
     "fetch_json": "^1.1.0",
     "jq-cssvar": "^1.0.1",
     "jquery": "^3.3.1",
+    "lodash.clone": "^4.5.0",
+    "lodash.debounce": "^4.0.8",
+    "lodash.throttle": "^4.1.1",
     "spinner-lord": "^0.2.6",
-    "vue": "^2.5.13"
+    "vue": "^2.5.16",
+    "vue2-google-maps": "^0.8.11",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -23,26 +28,26 @@
     "babel-preset-env": "^1.6.1",
     "clean-webpack-plugin": "^0.1.19",
     "compass-mixins": "^0.12.10",
-    "cross-env": "^5.1.1",
-    "css-loader": "^0.28.10",
+    "cross-env": "^5.1.4",
+    "css-loader": "^0.28.11",
     "dashify": "^1.0.0",
     "file-loader": "^1.1.11",
     "img-loader": "^2.0.0",
     "mixin-loader": "^2.0.3",
     "ncp": "^2.0.0",
-    "node-sass": "^4.7.2",
+    "node-sass": "^4.8.3",
     "pkg": "^4.3.0",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.19.1",
     "url-loader": "^0.6.2",
     "vue-loader": "^13.7.1",
     "vue-style-loader": "^3.0.3",
-    "vue-template-compiler": "^2.5.9",
+    "vue-template-compiler": "^2.5.16",
     "webpack": "^3.11.0",
     "webpack-manifest-plugin": "^1.3.2"
   },
   "scripts": {
-    "setup": "npm i && npm up && source aliases.sh",
+    "setup": "npm i && npm up",
     "build": "webpack --progress",
     "watch": "webpack --watch --progress"
   },
@@ -50,7 +55,7 @@
     "type": "git",
     "url": "git+https://github.com/Voltra/ergowebInfo2.git"
   },
-  "author": "Ludwig GUERIN, Romain JAOUEN Theowen LE MAITRE",
+  "author": "Ludwig GUERIN, Romain JAOUEN, Theowen LE MAITRE",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Voltra/ergowebInfo2/issues"

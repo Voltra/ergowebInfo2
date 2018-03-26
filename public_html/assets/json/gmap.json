@@ -1,0 +1,62 @@
+{
+    "api_key": "AIzaSyBasgi9CmiqP9mQA1hKlTtZres0doAvnTk",
+    "coords": {
+        "center": {
+            "lat": 47.694974,
+            "lng": 0.25177
+        },
+        "markers": [
+            {
+                "position": {
+                    "lat": 47.066309,
+                    "lng": 3.015831
+                }
+            },{
+                "position": {
+                    "lat": 47.331,
+                    "lng": 2.839
+                }
+            },{
+                "position": {
+                    "lat": 47.868,
+                    "lng": 2.1231
+                }
+            },{
+                "position": {
+                    "lat": 47.6738,
+                    "lng": 1.5273
+                }
+            },{
+                "position": {
+                    "lat": 47.491873,
+                    "lng": 1.233044
+                }
+            },{
+                "position": {
+                    "lat": 47.259,
+                    "lng": 0.465781
+                }
+            },{
+                "position": {
+                    "lat": 47.235386,
+                    "lng": -0.009405
+                }
+            },{
+                "position": {
+                    "lat": 47.3644,
+                    "lng": -1.001516
+                }
+            },{
+                "position": {
+                    "lat": 47.293804,
+                    "lng": -1.384199
+                }
+            },{
+                "position": {
+                    "lat": 47.281543,
+                    "lng": -2.063643
+                }
+            }
+        ]
+    }
+}

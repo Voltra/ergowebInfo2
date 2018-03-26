@@ -2,10 +2,12 @@
 	height: $topBarHeight;
     
     & > .logo{
+        width: $logoMaxWidth;
         height: $logoMaxHeight;
         padding: $defaultSpacing;
         
         & > img{
+            max-width: $logoImgMaxWidth;
             max-height: $logoImgMaxHeight;
         }
     }

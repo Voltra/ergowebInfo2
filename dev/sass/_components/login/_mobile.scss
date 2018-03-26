@@ -1,0 +1,22 @@
+.login-form{
+    width: $loginWidthMobile;
+    height: $loginHeightMobile;
+    padding: $loginPaddingMobileV $loginPaddingMobileH;
+    
+    & > form{
+        width: $loginFormWidthMobile;
+        height: $loginFormHeightMobile;
+        
+        font-size: $loginFontSizeMobile;
+        
+        & > [name="identifier"], & > [name="password"]{
+            @include border-radius($loginBorderRadiusMobile);
+        }
+        
+        & > [type="submit"]{
+            & > i.material-icons{
+                font-size: calc(1.5 * #{$loginFontSizeMobile});
+            }
+        }
+    }
+}

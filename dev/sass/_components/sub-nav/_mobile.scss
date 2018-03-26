@@ -1,0 +1,32 @@
+li.elem{
+    display: block;
+    width: $navElemWidthMobile;
+    height: $navElemHeightMobile;
+    
+    font-size: $navFontSizeMobile;
+    
+    & > ul.sub-nav{
+        position: relative;
+        top: 100%;//50%;
+        width: $subNavElemWidthMobile;
+        
+        & > li.elem{
+            width: $subNavElemWidthMobile;
+            height: $subNavElemHeightMobile;
+            
+            & > span{
+                @include absoluteCenterY();
+                left: $mobileDefaultSpacing;
+            }
+        }
+    }
+}
+
+//li.elem:hover{
+//    & > ul.sub-nav{
+//        height: auto;
+//        & > li.elem{
+//            height: $navElemHeight;
+//        }
+//    }
+//}

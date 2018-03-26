@@ -46,7 +46,7 @@
         },
 		render(){
 			return (
-                <li class={this.classes} on-click={ ::this.navigate }>
+                <li class={this.classes} onClick={ ::this.navigate }>
                     {
                         this.isCurrent()
                         ? <span>{this.$props["elem"].name}</span>

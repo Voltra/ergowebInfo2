@@ -1,3 +1,19 @@
-.menu{
-	height: $menuHeight;
+.menuContainer {
+    width: $menuContainerWidth;
+    height: $menuContainerHeight;
+    
+    & > .shadow{
+        @include invisible();
+    }
+    
+	& > .menu-opener{
+        &, & span{
+            @include invisible();
+        }
+    }
+
+    & > .menu{
+        width: $menuWidth;
+        height: $menuHeight;
+    }
 }

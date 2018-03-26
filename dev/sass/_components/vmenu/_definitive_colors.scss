@@ -1,0 +1,36 @@
+.menuContainer {
+	& > .menu-opener {
+        cursor: pointer;
+        
+        border: none;
+        background-color: $secondary;
+        transition: background-color 0.3s ease-in-out;
+        
+        @include box-shadow($regularShadow);
+        
+        & > span{
+            background-color: $white;
+        }
+        
+        &:hover{
+            background-color: $accent;
+        }
+    }
+        
+    .menu{
+        background-color: $primary;
+        @include box-shadow($regularLeftShadow);
+    }
+    
+    & > .shadow{
+        cursor: pointer;
+        background-color: transparent;
+        transition: background-color 0.3s ease-in-out;
+    }
+    
+    &.opened{
+        & > .shadow{
+            background-color: $hidingShadow;
+        }
+    }
+}

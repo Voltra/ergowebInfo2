@@ -1,5 +1,13 @@
-.menu{
+.menuContainer {
     float: left;
-	width: $menuWidth;
-    position: relative;
+//    width: $menuContainerWidth;
+    
+    & > .menu-opener {
+        position: relative;
+    }
+    
+    & > .menu{
+        float: left;
+        position: relative;
+    }
 }

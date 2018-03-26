@@ -1,11 +1,11 @@
-import jsonClient from "@voltra/json"
+import {$json} from "@voltra/json"
 
 const plugin = {
     install(Vue){
         Object.defineProperties(Vue.prototype, {
             $json: {
                 get(){
-                    return jsonClient;
+                    return $json;
                 }
             }
         });

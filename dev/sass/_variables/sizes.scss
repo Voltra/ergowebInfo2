@@ -15,19 +15,41 @@ $fullHeight: $height;
 /*************************************\
     Top bar
 \*************************************/
-$topBarHeightMobile: 10vh;
+$topBarHeightMobile: 15vh;
 $topBarHeight: 6vw;
 
 $logoMaxWidth: 2 * $topBarHeight;//$fullWidth / 6;
+$logoMaxWidthMobile: $topBarHeightMobile;//$fullWidth / 6;
 $logoMaxHeight: $topBarHeight;
 $logoMaxHeightMobile: $topBarHeightMobile;
 
+$logoImgMaxWidth: calc(#{$logoMaxWidth} - 2 * #{$defaultSpacing});
+$logoImgMaxWidthMobile: calc(#{$logoMaxWidthMobile} - 2 * #{$mobileDefaultSpacing});
 $logoImgMaxHeight: calc(#{$logoMaxHeight} - 2 * #{$defaultSpacing});
 $logoImgMaxHeightMobile: calc(#{$logoMaxHeightMobile} - 2 * #{$mobileDefaultSpacing});
 
-$menuWidth: calc(#{$fullWidth} - #{$logoMaxWidth});
-$menuHeight: $topBarHeight;
-$menuHeightMobile: $topBarHeightMobile;
+
+
+/*************************************\
+    Menu
+\*************************************/
+$menuContainerWidth: calc(#{$fullWidth} - #{$logoMaxWidth});
+$menuContainerWidthMobile: calc(#{$fullWidth} - #{$logoMaxWidthMobile});
+$menuContainerHeight: $topBarHeight;
+$menuContainerHeightMobile: $topBarHeightMobile;
+    $menuWidth: $menuContainerWidth;
+    $menuWidthMobile: $fullWidth * 2 / 3;
+    $menuHeight: $menuContainerHeight;
+    $menuHeightMobile: $fullHeight;
+        $shadowWidth: $fullWidth;
+        $shadowHeight: $fullHeight;
+        $menuOpenerMargin: 2 * $mobileDefaultSpacing;
+        $menuOpenerWidth: calc(#{$topBarHeightMobile} - (4 * #{$mobileDefaultSpacing}));
+        $menuOpenerHeight: $menuOpenerWidth;
+            $menuSpanWidth: calc(#{$menuOpenerWidth} * 0.7);
+            $menuSpanHeight: calc(#{$menuOpenerHeight} / 7);
+            $menuSpanMarginV: $menuSpanHeight;
+            $menuSpanMarginH: calc((#{$menuOpenerWidth} - #{$menuSpanWidth}) / 2);
 
 
 
@@ -38,22 +60,22 @@ $menuHeightMobile: $topBarHeightMobile;
 $navAmount: var(--nav-mount, 4);
 $navProp: 2 / 5;
 
-$navWidth: calc(2 / 5 * #{$menuWidth});//figure this out later
-$navWidthMobile: 10vw;//figure this out later
+$navWidth: calc(2 / 5 * #{$menuWidth});
+$navWidthMobile: $menuWidthMobile;
 $navHeight: $menuHeight;
-$navHeightMobile: calc( #{$navAmount} * #{$menuHeightMobile});
+$navHeightMobile: auto;//calc(#{$navAmount} * #{$menuHeightMobile});
 
 $navElemWidth: calc(#{$navWidth} / #{$navAmount});
-$navElemWidthMobile: 10vw;//figure this out later
+$navElemWidthMobile: $navWidthMobile;
     $subNavElemWidth: calc(2 * #{$navWidth} / #{$navAmount});
-    $subNavElemWidthMobile: 10vw;//figure this out later
+    $subNavElemWidthMobile: calc(#{$navWidthMobile} * 90 / 100);
 $navElemHeight: $navHeight;
-$navElemHeightMobile: 10vh;//figure this out later
+$navElemHeightMobile: 8vh;
     $subNavElemHeight: calc(2 / 3 * #{$navHeight});
-    $subNavElemHeightMobile: 10vh;//figure this out later
+    $subNavElemHeightMobile: calc(#{$navElemHeightMobile} * 2 / 3);
 
 $navFontSize: 1.1vw;
-$navFontSizeMobile: 1.1vh;
+$navFontSizeMobile: 1em;//1.1vh;
 
 
 
@@ -67,14 +89,14 @@ $searchBarBorderRadius: 1.75vh;
 $searchBarBorderRadiusMobile: 1.75vw;
 
 $searchBarPaddingH: $defaultSpacing;
-$searchBarPaddingMobileH: $mobileDefaultSpacing;
-$searchBarPaddingV: 2 * $defaultSpacing;
-$searchBarPaddingMobileV: 2 * $mobileDefaultSpacing;
+$searchBarPaddingMobileH: $mobileDefaultSpacing * 2 / 3;
+$searchBarPaddingV: $defaultSpacing * 3 / 2;
+$searchBarPaddingMobileV: $mobileDefaultSpacing * 2 / 3;
 
 $searchBarWidth: calc(3 / 5 / 3 * #{$menuWidth});
-$searchBarWidthMobile: 10vw;//figure this out later
+$searchBarWidthMobile: $navWidthMobile;//figure this out later
 $searchBarHeight: $menuHeight;
-$searchBarHeightMobile: 10vh;//figure this out later
+$searchBarHeightMobile: $navElemHeightMobile;//figure this out later
 
 $searchBarFontSize: $navFontSize;
 $searchBarFontSizeMobile: $navFontSizeMobile;
@@ -86,8 +108,8 @@ $searchBarFontSizeMobile: $navFontSizeMobile;
 
         $searchBarInputWidth: 80%;
         $searchBarInputHeight: 100%;
-        $searchBarInputPadding: calc(#{$defaultSpacing} / 2);
-        $searchBarInputPaddingMobile: calc(#{$mobileDefaultSpacing} / 2);
+        $searchBarInputPadding: calc(#{$defaultSpacing} * 2 / 3);
+        $searchBarInputPaddingMobile: calc(#{$mobileDefaultSpacing} * 2 / 3);
         $searchBarButtonWidth: 100% - $searchBarInputWidth;
         $searchBarButtonHeight: 100%;
 
@@ -107,9 +129,9 @@ $loginPaddingV: $searchBarPaddingV;
 $loginPaddingMobileV: $searchBarPaddingMobileV;
 
 $loginWidth: calc(3 / 5 * 2 / 3 * #{$menuWidth});
-$loginWidthMobile: 10vw;//figure this out later
+$loginWidthMobile: $searchBarWidthMobile;//figure this out later
 $loginHeight: $searchBarHeight;
-$loginHeightMobile: $searchBarHeightMobile;
+$loginHeightMobile: $navElemHeightMobile;
 
 $loginFontSize: $navFontSize;
 $loginFontSizeMobile: $navFontSizeMobile;
@@ -144,3 +166,34 @@ $loginFontSizeMobile: $navFontSizeMobile;
 \*************************************/
 $contentHeightMobile: calc(#{$fullHeight} - #{$topBarHeightMobile});
 $contentHeight: calc(#{$fullHeight} - #{$topBarHeight});
+$contentInnerWidth: calc(#{$fullWidth} - 2 * #{$defaultSpacing});
+$contentInnerWidthMobile: calc(#{$fullWidth} - 2 * #{$mobileDefaultSpacing});
+
+
+
+/*************************************\
+    Page content
+\*************************************/
+$gmapWidth: $contentInnerWidth;
+$gmapWidthMobile: $contentInnerWidthMobile;
+$gmapHeight: 45vh;//empirique
+$gmapHeightMobile: 60vw;//empirique
+
+
+
+
+/*************************************\
+    Footer
+\*************************************/
+$footerWidth: $fullWidth;
+$footerHeight: 15vw;
+$footerHeightMobile: 15vh;
+
+$footerFontSize: 2vh;
+$footerFontSizeMobile: 2vw;
+
+$footerSpacing: 2vh;
+
+$footerImgsWidth: calc(#{$footerWidth} - 2 * #{$footerSpacing});
+$footerImgsHeight: calc(#{$footerHeight} - 2 * #{$footerSpacing});
+$footerImgsHeightMobile: calc(#{$footerHeightMobile} - 2 * #{$footerSpacing});

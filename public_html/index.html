@@ -37,7 +37,9 @@
             <top-bar  :current="currentPage" :nav="nav" logo="assets/img/png/loireavelo.png">
             </top-bar>
             <app-content>
+                <g-map :coords="coords"></g-map>
             </app-content>
+            <v-footer :footer-data="footerData"></v-footer>
         </div>
     </body>
 </html>

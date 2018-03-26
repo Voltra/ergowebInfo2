@@ -137,7 +137,7 @@ config.module.rules.push({
 
 config.module.rules.push({
 	test: /\.vue$/,
-	exclude: libsRegex,
+	//exclude: libsRegex,
 	loader: "vue-loader",
     options: {
 		loaders: {

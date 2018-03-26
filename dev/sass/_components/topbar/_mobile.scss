@@ -2,11 +2,13 @@
 	height: $topBarHeightMobile;
     
     & > .logo{
+        width: $logoMaxWidthMobile;
         height: $logoMaxHeightMobile;
         padding: $mobileDefaultSpacing;
         
         & > img{
-            max-height: logoImgMaxHeightMobile;
+            max-width: $logoImgMaxWidthMobile;
+            max-height: $logoImgMaxHeightMobile;
         }
     }
 }

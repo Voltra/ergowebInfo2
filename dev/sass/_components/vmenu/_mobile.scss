@@ -1,3 +1,101 @@
-.menu{
-	height: $menuHeightMobile;
+.menuContainer{
+    width: $menuContainerWidthMobile;
+    height: $menuContainerHeightMobile;
+    
+    & > .menu{
+        overflow: hidden;
+        overflow-y: auto;
+//        display: none;
+        display: block;
+    }
+    
+    & > .shadow{
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        display: block;
+        width: $shadowWidth;
+        height: $shadowHeight;
+        z-index: -1;
+    }
+    
+    & > .menu-opener {
+        display: block;
+        width: $menuOpenerWidth;
+        height: $menuOpenerHeight;
+        margin: $menuOpenerMargin;
+        
+        padding: 0;
+        float: right;
+        z-index: 3;
+        
+//        @include border-radius(100vh);
+        
+        & > span{
+            display: block;
+            width: $menuSpanWidth;
+            height: $menuSpanHeight;
+            margin-bottom: $menuSpanMarginV;
+            margin-left: $menuSpanMarginH;
+            
+            
+            transition-duration: 0.4s;
+            
+            &.top{
+                margin-top: $menuSpanMarginV;
+            }
+            
+            &.top, &.bottom{
+                transition-property: transform;
+                transition-delay: 0.2s;
+                @include translateY(0);
+            }
+            
+            &.middle{
+                transition-property: opacity;
+                transition-delay: 0s;
+                opacity: 1;
+            }
+        }
+    }
+    
+    & > .menu{
+        width: $menuWidthMobile;
+        height: $menuHeightMobile;
+        z-index: 4;
+        
+        top: calc(-1 * #{$menuContainerHeightMobile});
+        right: -100%;
+        
+        transition: right 0.3s ease-in-out, display 0.1s step(1, start);
+    }
+    
+    &.opened{
+        & > .shadow{
+            z-index: 2;
+        }
+        
+        & > .menu{
+            display: block;
+            transition: right 0.3s ease-in-out, display 0.1s step(0, end) 0.3s;
+        }
+        
+        & > .menu-opener{
+            & > span{                
+                &.top{
+                    @include transform(translateY(200%) rotate(45deg));
+                }
+                
+                &.middle{
+                    opacity: 0;
+                    transition-delay: 0.3s;
+                }
+                
+                &.bottom{
+                    @include transform(translateY(-200%) rotate(-45deg));
+                }
+            }
+        }
+    }
 }
