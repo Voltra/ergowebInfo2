@@ -1,4 +1,12 @@
 .container {
 	min-height: $contentHeightMobile;
     padding: $mobileDefaultSpacing;
+    
+    & > *:not(.clear_float){
+        margin-bottom: $mobileDefaultSpacing;
+        
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
 }

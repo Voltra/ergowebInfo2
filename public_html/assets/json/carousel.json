@@ -1,0 +1,22 @@
+{
+    "title": "Actualités",
+    "images": [
+        {
+            "src": "assets/img/jpg/chasse_oeufs.jpg",
+            "alt": "Partez à la chasse aux oeufs de Pâques sur la Loire à Vélo",
+            "url": ""
+        },{
+            "src": "assets/img/jpg/10_lieux_insolites_vins.jpg",
+            "alt": "Top 10 des lieux insolites pour découvrir les meilleurs vins de Loire",
+            "url": ""
+        },{
+            "src": "assets/img/jpg/art_contemporain.jpg",
+            "alt": "Découvrez l’art contemporain sur La Loire à Vélo !",
+            "url": ""
+        },{
+            "src": "assets/img/png/brulez_calories.png",
+            "alt": "Comment perdre du poids sur La Loire à Vélo ?",
+            "url": ""
+        }
+    ]
+}

@@ -1,4 +1,12 @@
 .container {
 	min-height: $contentHeight;
     padding: $defaultSpacing;
+    
+    & > *:not(.clear_float){
+        margin-bottom: $defaultSpacing;
+        
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
 }

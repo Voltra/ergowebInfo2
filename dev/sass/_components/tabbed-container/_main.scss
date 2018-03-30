@@ -1,0 +1,9 @@
+.tabbed{
+    & > .title{
+        padding: $defaultSpacing;
+    }
+    
+    & > .content{
+        padding: $defaultSpacing;
+    }
+}

@@ -181,6 +181,27 @@ $gmapHeightMobile: 60vw;//empirique
 
 
 
+/*************************************\
+    Promo Box
+\*************************************/
+$promoWidth: calc((#{$contentInnerWidth} / 3) - 2vw);
+$promoWidthMobile: $contentInnerWidth;
+$promoMargin: 3vw;
+$promoImageFlexGrow: 0;
+$promoImageFlexShrink: 1;
+$promoImageFlexBasis: 15%;
+
+
+
+/*************************************\
+    Actu Carousel
+\*************************************/
+$actuHeight: 40vh;
+$actuInnerHeight: calc(#{$actuHeight} - ((2 * #{$defaultSpacing}) + 1em));
+$actuHeightMobile: 40vw;
+$actuInnerHeightMobile: calc(#{$actuHeightMobile} - ((2 * #{$mobileDefaultSpacing}) + 1em));
+
+
 
 /*************************************\
     Footer
@@ -189,8 +210,8 @@ $footerWidth: $fullWidth;
 $footerHeight: 15vw;
 $footerHeightMobile: 15vh;
 
-$footerFontSize: 2vh;
-$footerFontSizeMobile: 2vw;
+$footerFontSize: 1em;//2vh;
+//$footerFontSizeMobile: 2vw;
 
 $footerSpacing: 2vh;
 

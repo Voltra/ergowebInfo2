@@ -1,0 +1,12 @@
+.tabbed{
+    background-color: $white;
+    color: $textColor;
+    @include box-shadow($regularShadow);
+    
+    & > .title{
+        background-color: $primary;
+        color: $white;
+        
+        @include box-shadow($regularBottomShadow);
+    }
+}

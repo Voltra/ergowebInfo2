@@ -1,0 +1,13 @@
+.tabbed{
+    position: relative;
+    
+    & > .title{
+        width: 100%;
+        position: relative;
+    }
+    
+    & > .content{
+        width: 100%;
+        position: relative;
+    }
+}

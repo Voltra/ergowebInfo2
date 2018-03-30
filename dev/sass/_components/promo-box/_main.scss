@@ -1,0 +1,28 @@
+.tabbed.promobox{
+    float:left;
+    width: $promoWidth;
+
+    margin-right: $promoMargin;
+    &:nth-last-child(2){
+        margin-right: 0;
+    }
+
+    & > .content{
+        //
+        & > div{
+            //
+        }
+
+        & .images{
+            //
+
+            & img{                
+                margin-right: $defaultSpacing;
+            }
+        }
+
+        & .link{
+            //
+        }
+    }
+}

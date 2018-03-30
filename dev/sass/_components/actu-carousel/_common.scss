@@ -1,0 +1,31 @@
+.tabbed.actu{
+    & > .content{        
+        & > div{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        & img{
+        }
+        & a.title{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+    
+    & .VueCarousel-pagination{
+        float: unset;
+    }
+    
+    & .VueCarousel-navigation-button{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    & .VueCarousel-slide > div > div{
+        position: relative;
+    }
+}

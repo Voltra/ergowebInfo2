@@ -6,6 +6,7 @@ footer{
     & > p, & > a{
         display: block;
         text-align: center;
+        font-size: $footerFontSize;
     }
     
     & > a{
@@ -18,9 +19,7 @@ footer{
         width: $footerImgsWidth;
         
         & > .imgs__item{
-//            flex: 1;
             flex-grow: 1;
-            flex-direction: column;
             flex-shrink: 1;
             position: relative;
             

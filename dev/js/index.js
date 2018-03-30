@@ -12,6 +12,10 @@ import VMenu from "@components/VMenu"
 import GMap from "@components/GMap"
 import Url from "@components/Url"
 import ExtUrl from "@components/ExtUrl"
+import TabbedContainer from "@components/TabbedContainer"
+import PromoBox from "@components/PromoBox"
+import ActuCarousel from "@components/ActuCarousel"
+import ClearFloat from "@components/ClearFloat"
 
 import JsonClientPlugin from "@vplugins/$json"
 import MakeIdPlugin from "@vplugins/makeID"
@@ -27,8 +31,25 @@ const root = location.href.replace(/\/[^/]*$/, "");
 const asset = uri => root + "/assets/" + uri;
 
 $(document).ready(()=>{    
-    const components = { TopBar, AppContent, VMenu, VFooter, GMap, Url, ExtUrl };
-    const plugins = [JsonClientPlugin, MakeIdPlugin, JqueryPlugin, ResponsiveDirective];
+    const components = {
+        TopBar,
+        AppContent,
+        VMenu,
+        VFooter,
+        GMap,
+        Url,
+        ExtUrl,
+        TabbedContainer,
+        PromoBox,
+        ActuCarousel,
+        ClearFloat,
+    };
+    const plugins = [
+        JsonClientPlugin,
+        MakeIdPlugin,
+        JqueryPlugin,
+        ResponsiveDirective,
+    ];
     const componentsArray = Object.values(components);
     [...plugins, ...componentsArray].forEach(::Vue.use);
     
@@ -46,8 +67,10 @@ $(document).ready(()=>{
             });
             
             return j.coords;
-        })
-    ]).then(([nav, footerJson, coords]) => {
+        }),
+        $json.get(asset("json/promo.json")),
+        $json.get(asset("json/carousel.json"))
+    ]).then(([nav, footerJson, coords, promo, actus]) => {
         const img = uri => asset(`img/${uri}`);
         const footerData = footerJson.map(_ => Object.assign({}, _, {src: img(_.src)}));
         
@@ -59,6 +82,8 @@ $(document).ready(()=>{
                 nav,
                 footerData,
                 coords,
+                actus,
+                promos: Object.entries(promo).map(([key, value]) => ({key, value})),
                 currentPage: "Accueil" /*"Loire nature"*/
             },
             mounted(){

@@ -38,6 +38,16 @@
             </top-bar>
             <app-content>
                 <g-map :coords="coords"></g-map>
+                
+                <div>
+                    <promo-box v-for="promo in promos" :key="promo.key" :title="promo.key" :promo="promo.value">
+                    </promo-box>
+                    <clear-float></clear-float>
+                </div>
+                <clear-float></clear-float>
+                
+                <actu-carousel :title="actus.title" :actus="actus.images"></actu-carousel>
+                
             </app-content>
             <v-footer :footer-data="footerData"></v-footer>
         </div>

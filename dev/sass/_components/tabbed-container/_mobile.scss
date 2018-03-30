@@ -1,0 +1,9 @@
+.tabbed{
+    & > .title{
+        padding: $mobileDefaultSpacing;
+    }
+    
+    & > .content{
+        padding: $mobileDefaultSpacing;
+    }
+}

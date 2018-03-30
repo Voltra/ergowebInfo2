@@ -1,0 +1,22 @@
+.tabbed.promobox{
+    width: $promoWidthMobile;
+    
+    & > .content{
+        //
+        & > div{
+            //
+        }
+        
+        & .images{
+            //
+            
+            & img{                
+                margin-right: $mobileDefaultSpacing;
+            }
+        }
+        
+        & .link{
+            //
+        }
+    }
+}

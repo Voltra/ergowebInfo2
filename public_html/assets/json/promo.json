@@ -1,0 +1,44 @@
+{
+    "Services": {
+        "images": [
+            {
+                "src": "assets/img/png/location.png",
+                "alt": "Location"
+            },{
+                "src": "assets/img/png/hebergement.png",
+                "alt": "Hébergement"
+            },{
+                "src": "assets/img/png/guides.png",
+                "alt": "Topo-Guides"
+            },{
+                "src": "assets/img/png/transfert_bagages.png",
+                "alt": "Transfert de bagages"
+            }
+        ],
+        "url": "./services/"
+    },
+    "Accessibilité": {
+        "images": [
+            {
+                "src": "assets/img/png/par_train.png",
+                "alt": "Accès par train"
+            },{
+                "src": "assets/img/png/par_voiture.png",
+                "alt": "Accès par voiture"
+            }
+        ],
+        "url": "./access/"
+    },
+    "Séjour Clé en Main": {
+        "images": [
+            {
+                "src": "assets/img/png/amboise_chenonceau_chaumont__carre.png",
+                "alt": "Escapade à vélo Amboise - Chenonceau - Chaumont"
+            },{
+                "src": "assets/img/png/boucle_angevine__carre.png",
+                "alt": "Séjour La Loire à Vélo - Boucle angevine"
+            }
+        ],
+        "url": "./cle-en-main/"
+    }
+}
